@@ -1,0 +1,36 @@
+{
+  "description": "Telemetry event types observed in Claude Code v2.1.88",
+  "totalKnownEvents": "250+",
+  "prefix": "tengu_",
+  "batchConfig": {
+    "maxPerBatch": 200,
+    "flushIntervalMs": 10000
+  },
+  "categories": [
+    {
+      "category": "session_lifecycle",
+      "events": ["session_start", "session_end", "session_resume"]
+    },
+    {
+      "category": "tool_usage",
+      "events": ["tool_invoked", "tool_completed", "tool_failed"]
+    },
+    {
+      "category": "model_interaction",
+      "events": ["query_start", "query_complete", "query_error", "stream_start", "stream_complete"]
+    },
+    {
+      "category": "command_usage",
+      "events": ["slash_command_invoked"]
+    },
+    {
+      "category": "permission_events",
+      "events": ["permission_requested", "permission_granted", "permission_denied"]
+    },
+    {
+      "category": "error_tracking",
+      "events": ["error_captured", "crash_report"]
+    }
+  ],
+  "datadogEventTypesLimit": 64
+}

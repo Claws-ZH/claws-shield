@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "scoringModel": "subtractive",
+  "baseScore": 100,
+  "severityPenalties": {
+    "critical": { "perFinding": 30, "maxPenalty": 60 },
+    "high": { "perFinding": 15, "maxPenalty": 45 },
+    "medium": { "perFinding": 7, "maxPenalty": 28 },
+    "low": { "perFinding": 3, "maxPenalty": 15 }
+  },
+  "gradeBands": {
+    "A": { "min": 90, "max": 100, "label": "Excellent", "description": "Safe to install" },
+    "B": { "min": 80, "max": 89, "label": "Good", "description": "Minor issues, safe with awareness" },
+    "C": { "min": 65, "max": 79, "label": "Fair", "description": "Review before installing" },
+    "D": { "min": 50, "max": 64, "label": "Poor", "description": "Manual review required" },
+    "F": { "min": 0, "max": 49, "label": "Failing", "description": "Do not install" }
+  },
+  "policies": {
+    "safeToInstall": {
+      "noFindingsAbove": "high",
+      "maxMediumFindings": 3
+    },
+    "manualReviewRequired": {
+      "anyFindingAbove": "medium",
+      "orTotalFindings": 5
+    }
+  }
+}

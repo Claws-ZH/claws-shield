@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-04-01T00:00:00.000Z",
+  "sources": [
+    "01-telemetry-and-privacy",
+    "02-hidden-features-and-codenames",
+    "03-undercover-mode",
+    "04-remote-control-and-killswitches",
+    "05-future-roadmap"
+  ],
+  "datasets": {
+    "telemetry/endpoints.json": "2026.04.01",
+    "telemetry/metadata-fields.json": "2026.04.01",
+    "flags/feature-flags.json": "2026.04.01",
+    "flags/killswitches.json": "2026.04.01",
+    "codenames/models.json": "2026.04.01",
+    "remote-control/managed-settings.json": "2026.04.01",
+    "undercover/activation-rules.json": "2026.04.01",
+    "hidden-features/unreleased-tools.json": "2026.04.01",
+    "baselines/privacy-grading.json": "2026.04.01",
+    "baselines/security-grading.json": "2026.04.01"
+  }
+}

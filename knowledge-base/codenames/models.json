@@ -1,0 +1,78 @@
+[
+  {
+    "codename": "Tengu",
+    "origin": "天狗 (Japanese mythology)",
+    "kind": "product_prefix",
+    "mapsTo": null,
+    "status": "active",
+    "visibility": "internal",
+    "usage": "Prefix for 250+ analytics events and feature flags (tengu_*)",
+    "notes": [
+      "All telemetry events and feature flags use tengu_ prefix",
+      "Random word-pair naming pattern to obscure purpose (e.g., tengu_frond_boric)",
+      "Protected by build-time canary scanning in scripts/excluded-strings.txt"
+    ],
+    "firstSeenVersion": "2.1.88",
+    "evidence": [
+      {"file": "src/services/analytics/", "description": "Telemetry event prefix"},
+      {"file": "scripts/excluded-strings.txt", "description": "Canary protection"}
+    ]
+  },
+  {
+    "codename": "Capybara",
+    "origin": "水豚 (South American rodent)",
+    "kind": "model",
+    "mapsTo": "Sonnet v8",
+    "status": "active",
+    "visibility": "internal",
+    "usage": "Internal codename for Claude Sonnet v8 model series",
+    "notes": [
+      "Associated with v8 prompt patches for behavioral issues",
+      "Known issues: 29-30% false claims rate, stop sequence false trigger ~10%, over-commenting",
+      "Protected by undercover mode and codename filtering",
+      "String.fromCharCode() used to encode name to avoid canary trigger"
+    ],
+    "knownVersions": ["capybara-v2-fast", "capybara-v2-fast[1m]"],
+    "firstSeenVersion": "2.1.88",
+    "evidence": [
+      {"file": "src/constants/prompts.ts", "description": "Prompt behavior patches"},
+      {"file": "src/utils/undercover.ts", "description": "Codename protection"}
+    ]
+  },
+  {
+    "codename": "Fennec",
+    "origin": "耳廓狐 (Fennec fox)",
+    "kind": "model",
+    "mapsTo": "Opus 4.6 (predecessor)",
+    "status": "deprecated",
+    "visibility": "internal",
+    "usage": "Previous internal codename, migrated to Opus 4.6",
+    "notes": [
+      "Migration script exists: fennec-latest → opus, fennec-latest[1m] → opus[1m]",
+      "fennec-fast-latest → opus[1m] + fast mode"
+    ],
+    "firstSeenVersion": "2.1.88",
+    "evidence": [
+      {"file": "src/migrations/migrateFennecToOpus.ts:7-11", "description": "Migration script"}
+    ]
+  },
+  {
+    "codename": "Numbat",
+    "origin": "袋食蚁兽 (Australian marsupial)",
+    "kind": "model",
+    "mapsTo": "Next generation model",
+    "status": "upcoming",
+    "visibility": "internal",
+    "usage": "Codename for next model launch",
+    "notes": [
+      "Comment marker: @[MODEL LAUNCH]: Remove this section when we launch numbat",
+      "20+ MODEL LAUNCH checklist markers in codebase",
+      "Protected from disclosure in undercover mode"
+    ],
+    "firstSeenVersion": "2.1.88",
+    "evidence": [
+      {"file": "src/constants/prompts.ts:402", "description": "Model launch marker"},
+      {"file": "src/utils/undercover.ts:49", "description": "Protected from leak"}
+    ]
+  }
+]

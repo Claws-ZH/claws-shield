@@ -1,0 +1,35 @@
+[
+  {
+    "id": "anthropic-undercover-mode",
+    "activation": {
+      "requiredEnv": { "USER_TYPE": "ant" },
+      "repoCondition": "non_internal_repo",
+      "forceOffSupported": false,
+      "manualEnableTrigger": "CLAUDE_CODE_UNDERCOVER=truthy"
+    },
+    "effects": [
+      "strip_ai_attribution",
+      "suppress_model_codenames",
+      "remove_coauthoredby_lines",
+      "human_style_commit_messages",
+      "suppress_internal_repo_names",
+      "suppress_slack_channels",
+      "suppress_internal_shortlinks",
+      "suppress_phrases_claude_code",
+      "suppress_model_version_numbers"
+    ],
+    "promptSignature": "## UNDERCOVER MODE — CRITICAL\n\nYou are operating UNDERCOVER in a PUBLIC/OPEN-SOURCE repository.",
+    "modelMasking": {
+      "method": "partial_mask",
+      "example": "capybara-v2-fast → cap*****-v2-fast",
+      "fallback": "Claude Opus 4.6",
+      "source": "src/utils/model/model.ts:386-392"
+    },
+    "riskClassification": "transparency_concern",
+    "evidence": [
+      { "version": "2.1.88", "file": "src/utils/undercover.ts:28-37" },
+      { "version": "2.1.88", "file": "src/utils/undercover.ts:39-69" },
+      { "version": "2.1.88", "file": "src/utils/attribution.ts:70-72" }
+    ]
+  }
+]

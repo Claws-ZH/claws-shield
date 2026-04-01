@@ -1,0 +1,100 @@
+[
+  {
+    "id": "anthropic-event-logging-batch",
+    "url": "https://api.anthropic.com/api/event_logging/batch",
+    "host": "api.anthropic.com",
+    "path": "/api/event_logging/batch",
+    "classification": "first_party_telemetry",
+    "transport": "opentelemetry_protobuf",
+    "batching": {
+      "maxEvents": 200,
+      "flushIntervalMs": 10000,
+      "retryPolicy": "quadratic_backoff",
+      "maxRetries": 8,
+      "diskPersistence": true,
+      "persistencePath": "~/.claude/telemetry/"
+    },
+    "privacyImpact": {
+      "level": "high",
+      "reasons": [
+        "environment_fingerprinting",
+        "session_tracking",
+        "tool_input_logging",
+        "repository_url_hashing",
+        "no_user_opt_out"
+      ]
+    },
+    "evidence": [
+      {
+        "version": "2.1.88",
+        "file": "src/services/analytics/firstPartyEventLoggingExporter.ts",
+        "source": "01-telemetry-and-privacy"
+      }
+    ],
+    "tags": ["anthropic", "telemetry", "1p", "opentelemetry"]
+  },
+  {
+    "id": "datadog-logs-intake",
+    "url": "https://http-intake.logs.us5.datadoghq.com/api/v2/logs",
+    "host": "http-intake.logs.us5.datadoghq.com",
+    "path": "/api/v2/logs",
+    "classification": "third_party_logging",
+    "transport": "json_https",
+    "token": "pubbbf48e6d78dae54bceaa4acf463299bf",
+    "eventTypesLimit": 64,
+    "batching": {
+      "maxEvents": 200,
+      "flushIntervalMs": 10000,
+      "retryPolicy": "quadratic_backoff",
+      "maxRetries": 8,
+      "diskPersistence": true
+    },
+    "privacyImpact": {
+      "level": "high",
+      "reasons": [
+        "third_party_data_export",
+        "plaintext_api_token",
+        "no_user_opt_out"
+      ]
+    },
+    "evidence": [
+      {
+        "version": "2.1.88",
+        "file": "src/services/analytics/datadog.ts",
+        "source": "01-telemetry-and-privacy"
+      }
+    ],
+    "tags": ["datadog", "telemetry", "3p", "logging"]
+  },
+  {
+    "id": "growthbook-ab-testing",
+    "url": "internal_sdk",
+    "host": "n/a",
+    "path": "n/a",
+    "classification": "ab_testing",
+    "transport": "sdk_internal",
+    "attributesSent": [
+      "id",
+      "sessionId",
+      "deviceID",
+      "platform",
+      "organizationUUID",
+      "subscriptionType"
+    ],
+    "privacyImpact": {
+      "level": "medium",
+      "reasons": [
+        "no_explicit_consent",
+        "user_tracking_attributes"
+      ]
+    },
+    "evidence": [
+      {
+        "version": "2.1.88",
+        "file": "src/services/analytics/growthbook.ts",
+        "source": "01-telemetry-and-privacy"
+      }
+    ],
+    "tags": ["growthbook", "ab_testing", "internal"]
+  }
+]

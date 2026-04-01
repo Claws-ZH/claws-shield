@@ -1,0 +1,28 @@
+{
+  "modelOverride": {
+    "flag": "tengu_ant_model_override",
+    "capabilities": [
+      "set_default_model",
+      "set_default_effort_level",
+      "append_to_system_prompt",
+      "define_custom_model_aliases"
+    ],
+    "targetUsers": "internal_only",
+    "source": "src/utils/model/antModels.ts:32-33",
+    "riskLevel": "high"
+  },
+  "modelLaunchChecklist": {
+    "markers": "@[MODEL LAUNCH]",
+    "count": "20+",
+    "affectedAreas": [
+      "FRONTIER_MODEL_NAME",
+      "model_family_ids",
+      "knowledge_cutoff_dates",
+      "pricing_tables",
+      "context_window_configurations",
+      "thinking_mode_support_flags",
+      "display_name_mappings",
+      "migration_scripts"
+    ]
+  }
+}

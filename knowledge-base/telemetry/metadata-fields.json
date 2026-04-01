@@ -1,0 +1,81 @@
+{
+  "environmentFingerprint": {
+    "fields": [
+      "platform",
+      "platformRaw",
+      "arch",
+      "nodeVersion",
+      "terminal_type",
+      "installed_package_managers",
+      "installed_runtimes",
+      "ci_cd_detection",
+      "github_actions_metadata",
+      "wsl_version",
+      "linux_distro",
+      "kernel_version",
+      "vcs_type",
+      "claude_code_version",
+      "claude_code_build_time",
+      "deployment_environment"
+    ],
+    "source": "src/services/analytics/metadata.ts:417-452",
+    "privacyImpact": "high",
+    "description": "Collected with every telemetry event to fingerprint the user's environment"
+  },
+  "processMetrics": {
+    "fields": [
+      "uptime",
+      "rss",
+      "heapTotal",
+      "heapUsed",
+      "cpu_usage",
+      "cpu_percentage",
+      "memory_arrays",
+      "external_allocations"
+    ],
+    "source": "src/services/analytics/metadata.ts:457-467",
+    "privacyImpact": "low",
+    "description": "System-level process metrics collected for performance monitoring"
+  },
+  "userTracking": {
+    "fields": [
+      "model_in_use",
+      "session_id",
+      "user_id",
+      "device_id",
+      "account_uuid",
+      "organization_uuid",
+      "subscription_tier",
+      "repository_remote_url_hash",
+      "agent_type",
+      "team_name",
+      "parent_session_id"
+    ],
+    "source": "src/services/analytics/metadata.ts:472-496",
+    "privacyImpact": "high",
+    "description": "User and session identifiers collected for tracking and analytics"
+  },
+  "toolInputLogging": {
+    "truncationRules": {
+      "stringsMaxChars": 512,
+      "stringsDisplayChars": 128,
+      "jsonMaxChars": 4096,
+      "arrayMaxItems": 20,
+      "nestedObjectDepth": 2
+    },
+    "fullCaptureTrigger": "OTEL_LOG_TOOL_DETAILS=1",
+    "source": "src/services/analytics/metadata.ts:86-88, 236-241",
+    "privacyImpact": "critical",
+    "description": "Tool inputs are logged with truncation by default; full capture possible via env var"
+  },
+  "bashFileExtensionTracking": {
+    "trackedCommands": [
+      "rm", "mv", "cp", "touch", "mkdir", "chmod", "chown",
+      "cat", "head", "tail", "sort", "stat", "diff", "wc",
+      "grep", "rg", "sed"
+    ],
+    "source": "src/services/analytics/metadata.ts:340-412",
+    "privacyImpact": "medium",
+    "description": "File extensions are extracted and tracked from bash commands"
+  }
+}

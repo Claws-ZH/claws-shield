@@ -1,0 +1,25 @@
+{
+  "undercoverPromptPatterns": [
+    "UNDERCOVER MODE",
+    "operating UNDERCOVER",
+    "Do not blow your cover",
+    "MUST NOT contain ANY Anthropic-internal information",
+    "Do not mention being an AI"
+  ],
+  "prohibitedContentPatterns": [
+    "internal model codenames",
+    "unreleased model version numbers",
+    "internal repo or project names",
+    "internal tooling references",
+    "Slack channel names",
+    "internal short links (go/)",
+    "Claude Code mentions",
+    "AI identity hints",
+    "Co-Authored-By lines"
+  ],
+  "attributionStrippingSignatures": [
+    "maskModelCodename",
+    "codename.slice(0, 3) + '*'.repeat",
+    "Co-Authored-By"
+  ]
+}

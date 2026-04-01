@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/intel" },
+    { "path": "packages/scanner" },
+    { "path": "packages/gateway" },
+    { "path": "packages/auditor" },
+    { "path": "apps/cli" }
+  ],
+  "files": []
+}

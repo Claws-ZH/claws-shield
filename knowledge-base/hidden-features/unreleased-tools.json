@@ -1,0 +1,165 @@
+[
+  {
+    "name": "WebBrowserTool",
+    "internalCodename": "bagel",
+    "status": "implemented_gated",
+    "featureFlags": ["WEB_BROWSER_TOOL"],
+    "capabilityArea": "web_automation",
+    "riskProfile": ["remote_actions", "web_access", "data_retrieval"],
+    "description": "Built-in browser automation tool",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/WebBrowserTool.ts"}]
+  },
+  {
+    "name": "TerminalCaptureTool",
+    "status": "implemented_gated",
+    "featureFlags": ["TERMINAL_PANEL"],
+    "capabilityArea": "terminal_monitoring",
+    "riskProfile": ["screen_capture", "terminal_access"],
+    "description": "Terminal panel capture and monitoring",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/TerminalCaptureTool.ts"}]
+  },
+  {
+    "name": "WorkflowTool",
+    "status": "implemented_gated",
+    "featureFlags": ["WORKFLOW_SCRIPTS"],
+    "capabilityArea": "workflow_automation",
+    "riskProfile": ["script_execution", "workflow_control"],
+    "description": "Execute predefined workflow scripts",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/WorkflowTool.ts"}]
+  },
+  {
+    "name": "MonitorTool",
+    "status": "implemented_gated",
+    "featureFlags": ["MONITOR_TOOL"],
+    "capabilityArea": "system_monitoring",
+    "riskProfile": ["system_access", "process_monitoring"],
+    "description": "System and process monitoring",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/MonitorTool.ts"}]
+  },
+  {
+    "name": "SnipTool",
+    "status": "implemented_gated",
+    "featureFlags": ["HISTORY_SNIP"],
+    "capabilityArea": "context_management",
+    "riskProfile": ["data_modification"],
+    "description": "Conversation history snipping/truncation",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/SnipTool.ts"}]
+  },
+  {
+    "name": "ListPeersTool",
+    "status": "implemented_gated",
+    "featureFlags": ["UDS_INBOX"],
+    "capabilityArea": "multi_agent",
+    "riskProfile": ["inter_process_communication"],
+    "description": "Unix domain socket peer discovery",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/ListPeersTool.ts"}]
+  },
+  {
+    "name": "RemoteTriggerTool",
+    "status": "implemented_gated",
+    "featureFlags": ["AGENT_TRIGGERS_REMOTE"],
+    "capabilityArea": "remote_control",
+    "riskProfile": ["remote_execution", "agent_triggering"],
+    "description": "Remote agent triggering",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/RemoteTriggerTool.ts"}]
+  },
+  {
+    "name": "TungstenTool",
+    "status": "implemented_gated",
+    "featureFlags": [],
+    "capabilityArea": "internal_monitoring",
+    "riskProfile": ["performance_monitoring"],
+    "description": "Internal performance monitoring panel (ant-only)",
+    "availability": "internal_only",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/TungstenTool.ts"}]
+  },
+  {
+    "name": "VerifyPlanExecutionTool",
+    "status": "implemented_gated",
+    "featureFlags": ["VERIFY_PLAN"],
+    "capabilityArea": "verification",
+    "riskProfile": ["plan_verification"],
+    "description": "Plan execution verification (ant-only)",
+    "availability": "internal_only",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/VerifyPlanExecutionTool.ts"}]
+  },
+  {
+    "name": "OverflowTestTool",
+    "status": "implemented_gated",
+    "featureFlags": ["OVERFLOW_TEST_TOOL"],
+    "capabilityArea": "testing",
+    "riskProfile": ["context_testing"],
+    "description": "Context overflow testing",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/OverflowTestTool.ts"}]
+  },
+  {
+    "name": "SubscribePRTool",
+    "status": "implemented_gated",
+    "featureFlags": ["KAIROS_GITHUB_WEBHOOKS"],
+    "capabilityArea": "github_integration",
+    "riskProfile": ["webhook_subscription", "external_service_access"],
+    "description": "GitHub PR webhook subscriptions for KAIROS mode",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/SubscribePRTool.ts"}]
+  },
+  {
+    "name": "SleepTool",
+    "status": "implemented_gated",
+    "featureFlags": ["KAIROS", "PROACTIVE"],
+    "capabilityArea": "autonomous_agent",
+    "riskProfile": ["autonomous_decision"],
+    "description": "Control pacing between autonomous actions",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/SleepTool.ts"}]
+  },
+  {
+    "name": "SendUserFileTool",
+    "status": "implemented_gated",
+    "featureFlags": ["KAIROS"],
+    "capabilityArea": "autonomous_agent",
+    "riskProfile": ["file_sending", "autonomous_action"],
+    "description": "Proactively send files to user",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/SendUserFileTool.ts"}]
+  },
+  {
+    "name": "PushNotificationTool",
+    "status": "implemented_gated",
+    "featureFlags": ["KAIROS", "KAIROS_PUSH_NOTIFICATION"],
+    "capabilityArea": "autonomous_agent",
+    "riskProfile": ["push_notification", "user_interruption"],
+    "description": "Push notifications from KAIROS autonomous mode",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/PushNotificationTool.ts"}]
+  },
+  {
+    "name": "BriefTool",
+    "status": "implemented_gated",
+    "featureFlags": ["KAIROS_BRIEF"],
+    "capabilityArea": "autonomous_agent",
+    "riskProfile": ["status_reporting"],
+    "description": "Status updates from KAIROS autonomous mode",
+    "evidence": [{"version": "2.1.88", "file": "src/tools/BriefTool.ts"}]
+  },
+  {
+    "name": "BuddySystem",
+    "status": "implemented_gated",
+    "featureFlags": ["BUDDY"],
+    "capabilityArea": "gamification",
+    "riskProfile": [],
+    "description": "Virtual pet companion (18 species, 7 hats, 5 rarity tiers)",
+    "details": {
+      "species": ["duck","goose","blob","cat","dragon","octopus","owl","penguin","turtle","snail","ghost","axolotl","capybara","cactus","robot","rabbit","mushroom","chonk"],
+      "rarityDistribution": {"common":0.6,"uncommon":0.25,"rare":0.1,"epic":0.04,"legendary":0.01},
+      "hats": ["crown","tophat","propeller","halo","wizard","beanie","tinyduck"],
+      "stats": ["DEBUGGING","PATIENCE","CHAOS","WISDOM","SNARK"],
+      "shinyChance": 0.01
+    },
+    "evidence": [{"version": "2.1.88", "file": "src/buddy/"}]
+  },
+  {
+    "name": "DreamTask",
+    "status": "implemented_gated",
+    "featureFlags": ["tengu_onyx_plover"],
+    "capabilityArea": "memory_management",
+    "riskProfile": ["background_processing", "memory_consolidation"],
+    "description": "Background memory consolidation subagent",
+    "evidence": [{"version": "2.1.88", "file": "src/tasks/DreamTask/"}]
+  }
+]

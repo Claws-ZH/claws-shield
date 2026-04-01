@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "weights": {
+    "telemetry": 0.30,
+    "remote_control": 0.25,
+    "permissions": 0.15,
+    "network": 0.15,
+    "undercover": 0.15
+  },
+  "gradeBands": {
+    "A": { "min": 90, "max": 100, "label": "Excellent", "description": "Minimal privacy concerns" },
+    "B": { "min": 80, "max": 89, "label": "Good", "description": "Minor privacy concerns" },
+    "C": { "min": 65, "max": 79, "label": "Fair", "description": "Notable privacy concerns" },
+    "D": { "min": 50, "max": 64, "label": "Poor", "description": "Significant privacy concerns" },
+    "F": { "min": 0, "max": 49, "label": "Failing", "description": "Critical privacy concerns" }
+  },
+  "penalties": {
+    "undeactivatable_telemetry": { "points": 15, "severity": "critical" },
+    "accept_or_die_remote_control": { "points": 20, "severity": "critical" },
+    "undercover_mode_detected": { "points": 10, "severity": "high" },
+    "third_party_log_export": { "points": 8, "severity": "high" },
+    "device_fingerprinting": { "points": 8, "severity": "high" },
+    "full_tool_input_logging": { "points": 10, "severity": "critical" },
+    "remote_managed_settings": { "points": 10, "severity": "high" },
+    "hidden_feature_flags": { "points": 6, "severity": "medium" },
+    "ai_attribution_stripping": { "points": 8, "severity": "high" },
+    "no_user_opt_out_for_telemetry": { "points": 12, "severity": "critical" },
+    "repository_fingerprinting": { "points": 5, "severity": "medium" }
+  },
+  "baseScore": 100
+}

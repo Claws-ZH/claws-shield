@@ -1,0 +1,31 @@
+{
+  "name": "@claws-shield/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone CLI for Claws-Shield audit, scan, intel, and gateway",
+  "bin": {
+    "claws-shield": "./bin/claws-shield.js"
+  },
+  "files": ["dist", "bin"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@claws-shield/core": "workspace:*",
+    "@claws-shield/intel": "workspace:*",
+    "@claws-shield/scanner": "workspace:*",
+    "@claws-shield/gateway": "workspace:*",
+    "@claws-shield/auditor": "workspace:*",
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.0.0"
+  }
+}

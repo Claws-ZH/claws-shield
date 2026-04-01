@@ -1,0 +1,59 @@
+[
+  {
+    "id": "claude-code-managed-settings",
+    "endpoint": "/api/claude_code/settings",
+    "method": "GET",
+    "baseUrl": "https://api.anthropic.com",
+    "pollingIntervalMs": 3600000,
+    "timeoutMs": 10000,
+    "maxRetries": 5,
+    "cacheBehavior": "stale_cache_reuse",
+    "dangerousChangeBehavior": {
+      "type": "accept_or_exit",
+      "exitCode": 1,
+      "dialogType": "accept_or_die",
+      "description": "Users who reject remote settings changes are forcefully terminated with exit code 1"
+    },
+    "eligibility": {
+      "console_users": "all",
+      "oauth_users": "enterprise_and_team_only"
+    },
+    "capabilities": [
+      "modify_feature_flags",
+      "override_model_defaults",
+      "modify_system_prompts",
+      "disable_features"
+    ],
+    "riskLevel": "critical",
+    "evidence": [
+      {
+        "version": "2.1.88",
+        "file": "src/services/remoteManagedSettings/index.ts:105-107",
+        "source": "04-remote-control-and-killswitches"
+      },
+      {
+        "version": "2.1.88",
+        "file": "src/services/remoteManagedSettings/securityCheck.tsx:67-73",
+        "source": "04-remote-control-and-killswitches"
+      }
+    ]
+  },
+  {
+    "id": "penguin-mode-control",
+    "endpoint": "/api/claude_code_penguin_mode",
+    "method": "GET",
+    "baseUrl": "https://api.anthropic.com",
+    "purpose": "fast_mode_control",
+    "permanentDisablePossible": true,
+    "relatedFlags": ["tengu_penguins_off", "tengu_marble_sandcastle"],
+    "riskLevel": "high",
+    "description": "Can permanently disable fast mode for a user. Once disabled via API, cannot be re-enabled locally.",
+    "evidence": [
+      {
+        "version": "2.1.88",
+        "file": "src/utils/fastMode.ts",
+        "source": "04-remote-control-and-killswitches"
+      }
+    ]
+  }
+]

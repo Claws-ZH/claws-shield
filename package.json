@@ -1,0 +1,39 @@
+{
+  "name": "claws-shield",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The world's most powerful AI Agent audit & governance toolkit for OpenClaw",
+  "author": "claws-shield contributors",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules .turbo",
+    "kb:validate": "tsx scripts/validate-kb.mts",
+    "skills:pack": "tsx scripts/pack-skills.mts",
+    "skills:sizecheck": "tsx scripts/verify-bundle-size.mts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@changesets/cli": "^2.27.0",
+    "@changesets/changelog-github": "^0.5.0",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.0.0",
+    "zod": "^3.23.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

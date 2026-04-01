@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bypass-permissions-killswitch",
+    "name": "Bypass Permissions Killswitch",
+    "type": "statsig_gate",
+    "purpose": "Disable permission bypass capability",
+    "source": "src/utils/permissions/bypassPermissionsKillswitch.ts",
+    "riskLevel": "critical",
+    "remoteControlled": true,
+    "evidence": [{"version": "2.1.88"}]
+  },
+  {
+    "id": "auto-mode-circuit-breaker",
+    "name": "Auto Mode Circuit Breaker",
+    "type": "state_flag",
+    "purpose": "Prevent re-entry to auto mode",
+    "source": "src/utils/permissions/autoModeState.ts",
+    "riskLevel": "high",
+    "remoteControlled": false,
+    "evidence": [{"version": "2.1.88"}]
+  },
+  {
+    "id": "fast-mode-killswitch",
+    "name": "Fast Mode Killswitch",
+    "type": "api_endpoint",
+    "purpose": "Can permanently disable fast mode via /api/claude_code_penguin_mode",
+    "source": "src/utils/fastMode.ts",
+    "relatedFlags": ["tengu_penguins_off", "tengu_marble_sandcastle"],
+    "riskLevel": "high",
+    "remoteControlled": true,
+    "evidence": [{"version": "2.1.88"}]
+  },
+  {
+    "id": "analytics-sink-killswitch",
+    "name": "Analytics Sink Killswitch",
+    "type": "growthbook_flag",
+    "purpose": "Stop all telemetry via tengu_frond_boric flag",
+    "source": "src/services/analytics/sinkKillswitch.ts:4",
+    "relatedFlags": ["tengu_frond_boric"],
+    "riskLevel": "medium",
+    "remoteControlled": true,
+    "evidence": [{"version": "2.1.88"}]
+  },
+  {
+    "id": "agent-teams-killswitch",
+    "name": "Agent Teams Killswitch",
+    "type": "growthbook_plus_env",
+    "purpose": "Requires both GrowthBook flag AND env var to enable agent teams",
+    "source": "src/utils/agentSwarmsEnabled.ts",
+    "relatedFlags": ["tengu_amber_flint"],
+    "riskLevel": "medium",
+    "remoteControlled": true,
+    "evidence": [{"version": "2.1.88"}]
+  },
+  {
+    "id": "voice-mode-killswitch",
+    "name": "Voice Mode Emergency Killswitch",
+    "type": "growthbook_flag",
+    "purpose": "Emergency voice mode disable via tengu_amber_quartz_disabled",
+    "source": "src/voice/voiceModeEnabled.ts:21",
+    "relatedFlags": ["tengu_amber_quartz_disabled"],
+    "riskLevel": "medium",
+    "remoteControlled": true,
+    "evidence": [{"version": "2.1.88"}]
+  }
+]
