@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="12" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" fill="#e2e8f0" font-weight="700">Architecture Overview</text>
+  <rect x="370" y="48" width="160" height="2" rx="1" fill="#38bdf8" opacity="0.5"/>
+
+  <!-- ===== Knowledge Base Layer ===== -->
+  <g filter="url(#shadow)">
+    <rect x="280" y="70" width="340" height="52" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="335" y="93" font-family="monospace" font-size="13" fill="#f59e0b" font-weight="700">knowledge-base/</text>
+    <text x="335" y="110" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#94a3b8">JSON 研究数据集 · 10 datasets · 核心壁垒</text>
+    <!-- icon -->
+    <rect x="296" y="86" width="22" height="18" rx="3" fill="#f59e0b" opacity="0.15"/>
+    <text x="307" y="100" text-anchor="middle" font-size="12">📊</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="122" x2="450" y2="148" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="445,145 450,155 455,145" fill="#475569"/>
+
+  <!-- ===== Core Package ===== -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="155" width="300" height="52" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="355" y="178" font-family="monospace" font-size="13" fill="#6366f1" font-weight="700">@claws-shield/core</text>
+    <text x="355" y="195" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#94a3b8">类型 · 模式 · 评分引擎 · KB 加载器</text>
+    <rect x="316" y="171" width="22" height="18" rx="3" fill="#6366f1" opacity="0.15"/>
+    <text x="327" y="185" text-anchor="middle" font-size="12">⚙️</text>
+  </g>
+
+  <!-- Arrows from core to 4 packages -->
+  <line x1="350" y1="207" x2="150" y2="260" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="410" y1="207" x2="340" y2="260" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="490" y1="207" x2="560" y2="260" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="550" y1="207" x2="750" y2="260" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- ===== 4 Main Packages Row ===== -->
+  <!-- Intel -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="260" width="195" height="80" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="287" font-family="monospace" font-size="12" fill="#38bdf8" font-weight="700">@claws-shield/intel</text>
+    <text x="70" y="305" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">情报查询引擎</text>
+    <text x="70" y="320" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#64748b">查询 · 差异 · 代号查找</text>
+    <text x="54" y="290" font-size="12">🔍</text>
+  </g>
+
+  <!-- Scanner -->
+  <g filter="url(#shadow)">
+    <rect x="258" y="260" width="195" height="80" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="288" y="287" font-family="monospace" font-size="12" fill="#34d399" font-weight="700">@claws-shield/scanner</text>
+    <text x="288" y="305" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">安全扫描规则引擎</text>
+    <text x="288" y="320" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#64748b">15+ 规则 · 6 类别 · 评分</text>
+    <text x="272" y="290" font-size="12">🛡️</text>
+  </g>
+
+  <!-- Auditor -->
+  <g filter="url(#shadow)">
+    <rect x="476" y="260" width="195" height="80" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="506" y="287" font-family="monospace" font-size="12" fill="#a78bfa" font-weight="700">@claws-shield/auditor</text>
+    <text x="506" y="305" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">旗舰审计引擎</text>
+    <text x="506" y="320" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#64748b">7 分析器 · A-F 评级 · ~62KB</text>
+    <text x="490" y="290" font-size="12">📋</text>
+  </g>
+
+  <!-- Gateway -->
+  <g filter="url(#shadow)">
+    <rect x="694" y="260" width="185" height="80" rx="10" fill="#1e293b" stroke="#fb923c" stroke-width="1.5"/>
+    <text x="724" y="287" font-family="monospace" font-size="12" fill="#fb923c" font-weight="700">@claws-shield/gateway</text>
+    <text x="724" y="305" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#94a3b8">多模型路由网关</text>
+    <text x="724" y="320" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#64748b">Claude · GPT · Gemini · Ollama</text>
+    <text x="708" y="290" font-size="12">🔀</text>
+  </g>
+
+  <!-- ===== Arrows to consumers ===== -->
+  <!-- to CLI -->
+  <line x1="350" y1="340" x2="350" y2="395" stroke="#475569" stroke-width="1.2"/>
+  <line x1="550" y1="340" x2="550" y2="395" stroke="#475569" stroke-width="1.2"/>
+  <line x1="350" y1="395" x2="450" y2="395" stroke="#475569" stroke-width="1.2"/>
+  <line x1="550" y1="395" x2="450" y2="395" stroke="#475569" stroke-width="1.2"/>
+  <line x1="450" y1="395" x2="450" y2="410" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="445,407 450,417 455,407" fill="#475569"/>
+
+  <!-- to Skills -->
+  <line x1="137" y1="340" x2="137" y2="500" stroke="#475569" stroke-width="1.2"/>
+  <line x1="786" y1="340" x2="786" y2="500" stroke="#475569" stroke-width="1.2"/>
+  <line x1="137" y1="500" x2="450" y2="500" stroke="#475569" stroke-width="1.2"/>
+  <line x1="786" y1="500" x2="450" y2="500" stroke="#475569" stroke-width="1.2"/>
+  <line x1="450" y1="500" x2="450" y2="515" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="445,512 450,522 455,512" fill="#475569"/>
+
+  <!-- ===== CLI ===== -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="418" width="240" height="52" rx="10" fill="#1e293b" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="375" y="441" font-family="monospace" font-size="13" fill="#e2e8f0" font-weight="700">@claws-shield/cli</text>
+    <text x="375" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#94a3b8">独立 CLI 前端 · audit · scan · intel</text>
+    <text x="350" y="444" font-size="13">💻</text>
+  </g>
+
+  <!-- ===== Skills ===== -->
+  <g filter="url(#shadow)">
+    <rect x="195" y="525" width="510" height="74" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="450" y="548" text-anchor="middle" font-family="monospace" font-size="13" fill="#f472b6" font-weight="700">skills/ — OpenClaw 技能封装</text>
+    <!-- 4 skill pills -->
+    <g transform="translate(215, 555)">
+      <rect x="0" y="0" width="110" height="26" rx="13" fill="#f472b6" opacity="0.1"/>
+      <text x="55" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f472b6">agent-auditor</text>
+
+      <rect x="120" y="0" width="120" height="26" rx="13" fill="#f472b6" opacity="0.1"/>
+      <text x="180" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f472b6">agent-intelligence</text>
+
+      <rect x="250" y="0" width="100" height="26" rx="13" fill="#f472b6" opacity="0.1"/>
+      <text x="300" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f472b6">agent-gateway</text>
+
+      <rect x="360" y="0" width="110" height="26" rx="13" fill="#f472b6" opacity="0.1"/>
+      <text x="415" y="17" text-anchor="middle" font-family="monospace" font-size="10" fill="#f472b6">security-scanner</text>
+    </g>
+  </g>
+
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="899" height="619" rx="12" stroke="#334155" stroke-width="1" fill="none"/>
+</svg>

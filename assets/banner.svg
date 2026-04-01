@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="280" rx="16" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.03" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="280"/><line x1="60" y1="0" x2="60" y2="280"/>
+    <line x1="120" y1="0" x2="120" y2="280"/><line x1="180" y1="0" x2="180" y2="280"/>
+    <line x1="240" y1="0" x2="240" y2="280"/><line x1="300" y1="0" x2="300" y2="280"/>
+    <line x1="360" y1="0" x2="360" y2="280"/><line x1="420" y1="0" x2="420" y2="280"/>
+    <line x1="480" y1="0" x2="480" y2="280"/><line x1="540" y1="0" x2="540" y2="280"/>
+    <line x1="600" y1="0" x2="600" y2="280"/><line x1="660" y1="0" x2="660" y2="280"/>
+    <line x1="720" y1="0" x2="720" y2="280"/><line x1="780" y1="0" x2="780" y2="280"/>
+    <line x1="840" y1="0" x2="840" y2="280"/><line x1="900" y1="0" x2="900" y2="280"/>
+    <line x1="0" y1="60" x2="900" y2="60"/><line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/><line x1="0" y1="240" x2="900" y2="240"/>
+  </g>
+
+  <!-- Decorative circles -->
+  <circle cx="780" cy="60" r="120" fill="#38bdf8" opacity="0.03"/>
+  <circle cx="120" cy="220" r="80" fill="#6366f1" opacity="0.04"/>
+
+  <!-- Shield icon -->
+  <g transform="translate(120, 70)" filter="url(#glow)">
+    <path d="M60 0 L120 30 L120 75 C120 115 95 145 60 155 C25 145 0 115 0 75 L0 30 Z"
+          fill="url(#shield-grad)" opacity="0.9"/>
+    <path d="M60 15 L108 39 L108 75 C108 108 87 133 60 142 C33 133 12 108 12 75 L12 39 Z"
+          fill="#0f172a" opacity="0.6"/>
+    <!-- Checkmark -->
+    <path d="M38 78 L53 93 L82 58" stroke="#34d399" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Lock icon small -->
+    <rect x="48" y="105" width="24" height="18" rx="3" fill="#34d399" opacity="0.8"/>
+    <path d="M54 105 L54 97 C54 93 56 90 60 90 C64 90 66 93 66 97 L66 105" stroke="#34d399" stroke-width="2.5" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="280" y="125" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="url(#text-grad)" letter-spacing="-1">
+    Claws-Shield
+  </text>
+
+  <!-- Tagline -->
+  <text x="280" y="165" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" letter-spacing="0.5">
+    AI Agent Audit &amp; Governance Toolkit
+  </text>
+
+  <!-- Accent line -->
+  <rect x="280" y="180" width="120" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- Feature pills -->
+  <g transform="translate(280, 200)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="#38bdf8" opacity="0.12"/>
+    <text x="50" y="20" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#38bdf8" font-weight="600">Audit</text>
+
+    <rect x="115" y="0" width="120" height="30" rx="15" fill="#a78bfa" opacity="0.12"/>
+    <text x="175" y="20" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#a78bfa" font-weight="600">Intelligence</text>
+
+    <rect x="250" y="0" width="100" height="30" rx="15" fill="#34d399" opacity="0.12"/>
+    <text x="300" y="20" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#34d399" font-weight="600">Security</text>
+
+    <rect x="365" y="0" width="100" height="30" rx="15" fill="#fb923c" opacity="0.12"/>
+    <text x="415" y="20" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fb923c" font-weight="600">Gateway</text>
+  </g>
+
+  <!-- Version tag -->
+  <g transform="translate(740, 235)">
+    <rect x="0" y="0" width="100" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="50" y="17" text-anchor="middle" font-family="monospace" font-size="12" fill="#64748b">v1.0.0</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="899" height="279" rx="16" stroke="#334155" stroke-width="1" fill="none"/>
+</svg>

@@ -1,6 +1,8 @@
 <div align="center">
 
-# Claws-Shield
+<img src="./assets/banner.svg" alt="Claws-Shield Banner" width="100%"/>
+
+<br/>
 
 **The world's most powerful AI Agent audit & governance toolkit**
 
@@ -111,6 +113,12 @@ const response = await router.route({
 
 ## Audit Reports
 
+<div align="center">
+<img src="./assets/audit-report-example.svg" alt="Audit Report Example" width="520"/>
+</div>
+
+<br/>
+
 Agent Auditor generates comprehensive reports including:
 
 - **Overall Grade** (A-F) and score (0-100)
@@ -139,6 +147,12 @@ Agent Auditor generates comprehensive reports including:
 | **F** | 0-49 | Critical — serious issues found |
 
 ## Security Scanner Rules
+
+<div align="center">
+<img src="./assets/workflow.svg" alt="Workflow Diagram" width="100%"/>
+</div>
+
+<br/>
 
 15+ detection rules across 6 categories:
 
@@ -169,6 +183,10 @@ The intelligence database is built from deep reverse-engineering analysis, conta
 | `baselines/security-grading.json` | Security grading baselines |
 
 ## Architecture
+
+<div align="center">
+<img src="./assets/architecture.svg" alt="Architecture Diagram" width="100%"/>
+</div>
 
 ```
 claws-shield/

@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#f87171"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="500" rx="12" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" fill="#e2e8f0" font-weight="700">Workflow: Audit &amp; Scan Pipeline</text>
+  <rect x="340" y="46" width="220" height="2" rx="1" fill="#38bdf8" opacity="0.5"/>
+
+  <!-- ===== AUDIT FLOW (Top) ===== -->
+  <text x="40" y="85" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" fill="#a78bfa" font-weight="700">Agent Auditor 审计流程</text>
+
+  <!-- Step 1: Input -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="100" width="140" height="65" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1.2"/>
+    <text x="100" y="123" text-anchor="middle" font-size="18">📂</text>
+    <text x="100" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">AI 工具源码</text>
+    <text x="100" y="156" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Source Code Input</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="170" y1="132" x2="195" y2="132" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Collectors -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="100" width="140" height="65" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="270" y="123" text-anchor="middle" font-size="18">🔎</text>
+    <text x="270" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#a78bfa" font-weight="600">数据采集器</text>
+    <text x="270" y="156" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">7 Collectors</text>
+  </g>
+
+  <line x1="340" y1="132" x2="365" y2="132" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Analyzers -->
+  <g filter="url(#shadow)">
+    <rect x="370" y="100" width="140" height="65" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="440" y="123" text-anchor="middle" font-size="18">🧠</text>
+    <text x="440" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#a78bfa" font-weight="600">7 维度分析</text>
+    <text x="440" y="156" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">7 Analyzers</text>
+  </g>
+
+  <line x1="510" y1="132" x2="535" y2="132" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Scoring -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="100" width="140" height="65" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="610" y="123" text-anchor="middle" font-size="18">📊</text>
+    <text x="610" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#a78bfa" font-weight="600">加权评分</text>
+    <text x="610" y="156" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Weighted Scoring</text>
+  </g>
+
+  <line x1="680" y1="132" x2="705" y2="132" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Report -->
+  <g filter="url(#shadow)">
+    <rect x="710" y="100" width="160" height="65" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="790" y="123" text-anchor="middle" font-size="18">📋</text>
+    <text x="790" y="142" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#34d399" font-weight="600">审计报告 (A-F)</text>
+    <text x="790" y="156" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Graded Report + Evidence</text>
+  </g>
+
+  <!-- Analyzer detail boxes -->
+  <g transform="translate(200, 180)">
+    <rect x="0" y="0" width="88" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="44" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">遥测 30%</text>
+    <rect x="95" y="0" width="98" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="144" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">远程控制 25%</text>
+    <rect x="200" y="0" width="78" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="239" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">权限 15%</text>
+    <rect x="285" y="0" width="78" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="324" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">网络 15%</text>
+    <rect x="370" y="0" width="88" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="414" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">隐身 15%</text>
+    <rect x="465" y="0" width="88" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="509" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">隐藏功能</text>
+    <rect x="560" y="0" width="68" height="24" rx="12" fill="#a78bfa" opacity="0.12"/>
+    <text x="594" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#a78bfa">隐私</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="40" y1="230" x2="860" y2="230" stroke="#334155" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ===== SCAN FLOW (Bottom) ===== -->
+  <text x="40" y="260" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" fill="#34d399" font-weight="700">Skill Security Scanner 扫描流程</text>
+
+  <!-- Step 1: Skill input -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="278" width="140" height="65" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1.2"/>
+    <text x="100" y="301" text-anchor="middle" font-size="18">📦</text>
+    <text x="100" y="320" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e2e8f0" font-weight="600">OpenClaw 技能</text>
+    <text x="100" y="334" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">SKILL.md + scripts</text>
+  </g>
+
+  <line x1="170" y1="310" x2="195" y2="310" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Parse -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="278" width="140" height="65" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="270" y="301" text-anchor="middle" font-size="18">📝</text>
+    <text x="270" y="320" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#34d399" font-weight="600">解析文件</text>
+    <text x="270" y="334" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Parse &amp; Tokenize</text>
+  </g>
+
+  <line x1="340" y1="310" x2="365" y2="310" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Rule Engine -->
+  <g filter="url(#shadow)">
+    <rect x="370" y="278" width="140" height="65" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="440" y="301" text-anchor="middle" font-size="18">⚡</text>
+    <text x="440" y="320" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#34d399" font-weight="600">规则引擎</text>
+    <text x="440" y="334" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">15+ Rules × 6 Categories</text>
+  </g>
+
+  <line x1="510" y1="310" x2="535" y2="310" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Correlate -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="278" width="140" height="65" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="610" y="301" text-anchor="middle" font-size="18">🔗</text>
+    <text x="610" y="320" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#34d399" font-weight="600">关联分析</text>
+    <text x="610" y="334" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Multi-signal Correlation</text>
+  </g>
+
+  <line x1="680" y1="310" x2="705" y2="310" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Result -->
+  <g filter="url(#shadow)">
+    <rect x="710" y="278" width="160" height="65" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="790" y="301" text-anchor="middle" font-size="18">✅</text>
+    <text x="790" y="320" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#34d399" font-weight="600">安全报告 (A-F)</text>
+    <text x="790" y="334" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#94a3b8">Grade + Findings + Fix</text>
+  </g>
+
+  <!-- Rule category pills -->
+  <g transform="translate(200, 358)">
+    <rect x="0" y="0" width="78" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="39" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">恶意软件</text>
+    <rect x="85" y="0" width="78" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="124" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">提示注入</text>
+    <rect x="170" y="0" width="58" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="199" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">混淆</text>
+    <rect x="235" y="0" width="68" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="269" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">供应链</text>
+    <rect x="310" y="0" width="78" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="349" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">数据外泄</text>
+    <rect x="395" y="0" width="78" height="24" rx="12" fill="#34d399" opacity="0.12"/>
+    <text x="434" y="16" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#34d399">组合检测</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="40" y1="405" x2="860" y2="405" stroke="#334155" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- CI/CD integration note -->
+  <text x="40" y="432" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" fill="#fb923c" font-weight="700">CI/CD 集成</text>
+
+  <g transform="translate(30, 445)">
+    <!-- Pass -->
+    <rect x="0" y="0" width="260" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="25" font-family="monospace" font-size="11" fill="#94a3b8">audit --fail-below C</text>
+    <rect x="190" y="8" width="56" height="24" rx="12" fill="#34d399" opacity="0.15"/>
+    <text x="218" y="25" text-anchor="middle" font-family="monospace" font-size="10" fill="#34d399">exit 0</text>
+
+    <!-- Fail audit -->
+    <rect x="280" y="0" width="260" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="295" y="25" font-family="monospace" font-size="11" fill="#94a3b8">Grade D → fail-below C</text>
+    <rect x="470" y="8" width="56" height="24" rx="12" fill="#f87171" opacity="0.15"/>
+    <text x="498" y="25" text-anchor="middle" font-family="monospace" font-size="10" fill="#f87171">exit 10</text>
+
+    <!-- Fail scan -->
+    <rect x="560" y="0" width="300" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="575" y="25" font-family="monospace" font-size="11" fill="#94a3b8">scan --fail-on high (found)</text>
+    <rect x="790" y="8" width="56" height="24" rx="12" fill="#f87171" opacity="0.15"/>
+    <text x="818" y="25" text-anchor="middle" font-family="monospace" font-size="10" fill="#f87171">exit 20</text>
+  </g>
+
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="899" height="499" rx="12" stroke="#334155" stroke-width="1" fill="none"/>
+</svg>

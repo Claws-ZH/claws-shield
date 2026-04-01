@@ -1,6 +1,8 @@
 <div align="center">
 
-# Claws-Shield
+<img src="./assets/banner.svg" alt="Claws-Shield Banner" width="100%"/>
+
+<br/>
 
 **全球最强大的 AI Agent 审计与治理工具包**
 
@@ -111,6 +113,12 @@ const response = await router.route({
 
 ## 审计报告
 
+<div align="center">
+<img src="./assets/audit-report-example.svg" alt="Audit Report Example" width="520"/>
+</div>
+
+<br/>
+
 Agent Auditor 生成全面的审计报告，包含：
 
 - **总体等级**（A-F）和分数（0-100）
@@ -139,6 +147,12 @@ Agent Auditor 生成全面的审计报告，包含：
 | **F** | 0-49 | 危险 — 发现严重隐患 |
 
 ## 安全扫描规则
+
+<div align="center">
+<img src="./assets/workflow.svg" alt="Workflow Diagram" width="100%"/>
+</div>
+
+<br/>
 
 15+ 检测规则，覆盖 6 个类别：
 
@@ -169,6 +183,10 @@ Agent Auditor 生成全面的审计报告，包含：
 | `baselines/security-grading.json` | 安全评级基线 |
 
 ## 项目架构
+
+<div align="center">
+<img src="./assets/architecture.svg" alt="Architecture Diagram" width="100%"/>
+</div>
 
 ```
 claws-shield/
