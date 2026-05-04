@@ -4,12 +4,7 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../../packages/core" },
-    { "path": "../../packages/intel" },
-    { "path": "../../packages/scanner" },
-    { "path": "../../packages/gateway" },
-    { "path": "../../packages/auditor" }
+  "include": [
+    "src"
   ]
 }
