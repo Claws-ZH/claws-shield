@@ -1,9 +1,9 @@
 import { defineProject } from "vitest/config"
 
 export default defineProject({
-  test: {
-    name: "cli",
-    globals: true,
-    environment: "node",
-  },
+	test: {
+		name: "cli",
+		globals: true,
+		environment: "node",
+	},
 })

@@ -1,38 +1,37 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "complexity": {
-        "noExcessiveCognitiveComplexity": "warn"
-      },
-      "suspicious": {
-        "noExplicitAny": "warn"
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "tab",
-    "lineWidth": 100
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double",
-      "semicolons": "asNeeded"
-    }
-  },
-  "files": {
-    "ignore": [
-      "node_modules",
-      "dist",
-      "coverage",
-      ".turbo",
-      "*.json"
-    ]
-  }
+	"$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noExcessiveCognitiveComplexity": "warn",
+				"noForEach": "warn"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn",
+				"noAssignInExpressions": "warn"
+			},
+			"style": {
+				"noNonNullAssertion": "warn"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "asNeeded"
+		}
+	},
+	"files": {
+		"ignore": ["node_modules", "dist", "coverage", ".turbo", "*.json", "**/test/fixtures/**"]
+	}
 }
