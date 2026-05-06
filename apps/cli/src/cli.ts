@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// shebang is injected by tsup banner for ESM output (see tsup.config.ts)
 import { Command } from "commander"
 import { runAudit, formatJson, formatMarkdown, formatTerminal } from "@claws-shield/auditor"
 import { scanSkill } from "@claws-shield/scanner"
