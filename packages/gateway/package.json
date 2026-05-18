@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@claws-shield/core": "workspace:*",
-    "hono": "^4.12.17"
+    "hono": "^4.12.19"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
