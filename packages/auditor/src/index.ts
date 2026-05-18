@@ -25,13 +25,13 @@ export { formatTerminal } from "./reporters/audit-terminal.js"
 // Types
 export type { TargetInfo, AuditOptions, Analyzer, AuditScoreResult } from "./types/index.js"
 export type {
-  Evidence,
-  EvidenceType,
-  Finding,
-  FindingCategory,
-  Severity,
-  Grade,
-  ReportFormat,
-  AuditReport,
-  CategoryScore,
+	Evidence,
+	EvidenceType,
+	Finding,
+	FindingCategory,
+	Severity,
+	Grade,
+	ReportFormat,
+	AuditReport,
+	CategoryScore,
 } from "./types/index.js"
