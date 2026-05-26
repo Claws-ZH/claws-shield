@@ -18,7 +18,8 @@ export function queryFlags(db: IntelDatabase, opts: FlagQueryOptions) {
 		)
 	}
 	if (opts.prefix) {
-		results = results.filter((f: any) => f.flag.startsWith(opts.prefix!))
+		const prefix = opts.prefix
+		results = results.filter((f: any) => f.flag.startsWith(prefix))
 	}
 	if (opts.category) {
 		results = results.filter((f: any) => f.category === opts.category)

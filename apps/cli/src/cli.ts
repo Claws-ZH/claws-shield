@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { writeFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { formatJson, formatMarkdown, formatTerminal, runAudit } from "@claws-shield/auditor"
@@ -6,6 +5,7 @@ import { RESET, findKBRoot, gradeColor, scoreToGrade } from "@claws-shield/core"
 import type { AuditReport, Grade, ReportFormat } from "@claws-shield/core"
 import { loadIntelDatabase, queryCodenames, queryFlags, searchAll } from "@claws-shield/intel"
 import { scanSkill } from "@claws-shield/scanner"
+// shebang is injected by tsup banner for ESM output (see tsup.config.ts)
 import { Command } from "commander"
 
 const program = new Command()

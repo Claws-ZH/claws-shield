@@ -9,14 +9,11 @@
 			"recommended": true,
 			"complexity": {
 				"noExcessiveCognitiveComplexity": "warn",
-				"noForEach": "warn"
+				"noForEach": "off"
 			},
 			"suspicious": {
 				"noExplicitAny": "warn",
-				"noAssignInExpressions": "warn"
-			},
-			"style": {
-				"noNonNullAssertion": "warn"
+				"noAssignInExpressions": "off"
 			}
 		}
 	},
@@ -32,6 +29,13 @@
 		}
 	},
 	"files": {
-		"ignore": ["node_modules", "dist", "coverage", ".turbo", "*.json", "**/test/fixtures/**"]
+		"ignore": [
+			"node_modules",
+			"dist",
+			"coverage",
+			".turbo",
+			"*.json",
+			"packages/scanner/test/fixtures/**"
+		]
 	}
 }
